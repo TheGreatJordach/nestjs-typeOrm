@@ -22,7 +22,16 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Description 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_nestjs-typeOrm&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_nestjs-typeOrm)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_nestjs-typeOrm&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_nestjs-typeOrm)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_nestjs-typeOrm&metric=bugs)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_nestjs-typeOrm)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_nestjs-typeOrm&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_nestjs-typeOrm)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_nestjs-typeOrm&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_nestjs-typeOrm)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_nestjs-typeOrm&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_nestjs-typeOrm)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_nestjs-typeOrm&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_nestjs-typeOrm)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=TheGreatJordach_nestjs-typeOrm&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=TheGreatJordach_nestjs-typeOrm)
+
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
