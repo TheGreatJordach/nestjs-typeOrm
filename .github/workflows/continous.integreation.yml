@@ -1,0 +1,66 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:latest
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_DB: your_local_db_name
+          POSTGRES_USER: your_local_db_username
+          POSTGRES_PASSWORD: your_local_db_password
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./
+
+      - name: Build backend
+        run: npm run start
+        working-directory: ./
+
+      - name: Unit Tests
+        run: npm run test
+        working-directory: ./
+
+      - name: e2e Tests
+        run: npm run test:e2e
+        working-directory: ./
+
+      - name: Test coverage
+        run: npm run test:cov
+        working-directory: ./
+
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    needs: build # Ensure this job runs after the build job
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
